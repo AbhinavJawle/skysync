@@ -1,0 +1,122 @@
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --text-color: #333;
+  --background-color: #f4f4f4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.container {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  text-align: center;
+}
+
+.search-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.locationInput {
+  flex-grow: 1;
+  padding: 10px;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px 0 0 5px;
+  font-size: 16px;
+}
+
+#submitButton {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  transition: background-color 0.3s ease;
+}
+
+#submitButton:hover {
+  background-color: #2980b9;
+}
+
+#submitButton svg {
+  stroke: white;
+}
+
+.weather-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.location-info {
+  text-align: center;
+}
+
+.location-info h2 {
+  color: var(--primary-color);
+  font-size: 24px;
+}
+
+.temperature-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.weather-icon {
+  font-size: 72px;
+}
+
+.temp-details h1 {
+  font-size: 48px;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.additional-details {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-color);
+}
+
+.detail-item svg {
+  stroke: var(--secondary-color);
+}
+
+.hidden {
+  display: none;
+}
+
+#error-container {
+  color: red;
+  margin-top: 20px;
+}

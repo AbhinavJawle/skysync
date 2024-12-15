@@ -3,16 +3,97 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SkySync</title>
-    <script src="./script.js" defer></script>
+    <title>SkySync - Weather App</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <input
-      type="text"
-      class="locationInput"
-      placeholder="Enter your location"
-    />
-    <button id="submitButton">Submit</button>
+    <div class="container">
+      <div class="search-container">
+        <input
+          type="text"
+          class="locationInput"
+          placeholder="Enter your location"
+        />
+        <button id="submitButton">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div id="weather-container" class="weather-container hidden">
+        <div class="location-info">
+          <h2 id="location-name">Location</h2>
+          <p id="current-conditions">Conditions</p>
+        </div>
+
+        <div class="temperature-section">
+          <div class="weather-icon" id="weather-icon"></div>
+          <div class="temp-details">
+            <h1 id="current-temp">--°</h1>
+            <p id="feels-like">Feels like: --°</p>
+          </div>
+        </div>
+
+        <div class="additional-details">
+          <div class="detail-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M20 10c0 6-8 0-8 0"></path>
+              <path d="M10 14s-4-2-4-6 4-6 4 0"></path>
+              <path d="M7 22l3-3 1.5 1.5L15 17"></path>
+            </svg>
+            <span id="humidity-value">--</span>
+          </div>
+          <div class="detail-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 2v20"></path>
+              <path d="M5 12H2a10 10 0 0 0 20 0h-3"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+            <span id="description-value">Weather Description</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="error-container" class="error-container hidden">
+        <p id="error-message">Location not found</p>
+      </div>
+    </div>
   </body>
 </html>
