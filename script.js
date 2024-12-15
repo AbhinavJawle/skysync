@@ -94,8 +94,8 @@ const WeatherApp = (function () {
     domElements.currentConditions.textContent = weather.conditions;
 
     // Update temperature
-    domElements.currentTemp.textContent = `${weather.temp}° C`;
-    domElements.feelsLike.textContent = `Feels like: ${weather.feelsLike}°`;
+    domElements.currentTemp.textContent = `${weather.temp}° F`; //add celcius and f converter
+    domElements.feelsLike.textContent = `Feels like: ${weather.feelsLike}° F`;
 
     // Update weather icon
     domElements.weatherIcon.textContent = weatherIcons[weather.icon] || "❓";
